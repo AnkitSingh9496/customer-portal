@@ -1,0 +1,526 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f3f4f6;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  padding: 40px;
+}
+
+.table-container {
+  background: white;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+.user-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  border-spacing: 0;
+}
+
+.user-table thead {
+  background: #f9fafb;
+}
+
+.user-table thead th {
+  padding: 18px !important;
+  text-align: left;
+  font-size: 13px !important;
+  font-weight: 700;
+  color: #6b7280 !important;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e5e7eb !important;
+  background: #f9fafb !important;
+}
+
+.user-table tbody td {
+  padding: 18px !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  font-size: 14px;
+  color: #111827;
+  background: white !important;
+}
+
+.user-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.user-table tbody tr:hover td {
+  background: #f9fafb !important;
+}
+
+
+.status {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.active {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.inactive {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+
+.message {
+  padding: 40px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.error {
+  color: red;
+}
+
+
+.dataTables_wrapper {
+  padding: 5px;
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+  margin-bottom: 20px;
+}
+
+.dataTables_wrapper .dataTables_length label,
+.dataTables_wrapper .dataTables_filter label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.dataTables_wrapper .dataTables_length select {
+  padding: 8px 30px 8px 12px !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 10px !important;
+  background: white !important;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+.dataTables_wrapper .dataTables_filter input {
+  margin-left: 10px;
+  padding: 10px 14px !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 10px !important;
+  background: white !important;
+  outline: none;
+  transition: 0.2s ease;
+  font-size: 14px;
+}
+
+.dataTables_wrapper .dataTables_filter input:focus {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+
+.dataTables_wrapper .dataTables_paginate {
+  padding-top: 20px !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  min-width: 38px;
+  height: 38px;
+  line-height: 38px !important;
+  text-align: center;
+  padding: 0 12px !important;
+  margin: 0 4px !important;
+
+  border: none !important;
+  border-radius: 10px !important;
+
+  background: transparent !important;
+  color: #374151 !important;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: all 0.2s ease !important;
+}
+
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background: #eff6ff !important;
+  color: #2563eb !important;
+  border: none !important;
+}
+
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background: #2563eb !important;
+  color: white !important;
+  font-weight: 600;
+}
+
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background: #2563eb !important;
+  color: white !important;
+}
+
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled {
+  opacity: 0.4;
+  cursor: not-allowed !important;
+}
+
+
+.dataTables_wrapper .dataTables_info {
+  padding-top: 28px !important;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+
+table.dataTable.no-footer {
+  border-bottom: none !important;
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+table.dataTable tbody tr {
+  background-color: white !important;
+}
+
+table.dataTable.display tbody tr.odd,
+table.dataTable.stripe tbody tr.odd {
+  background-color: white !important;
+}
+
+
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc:after {
+  color: #9ca3af !important;
+  opacity: 1 !important;
+}
+
+
+@media (max-width: 768px) {
+  .app {
+    padding: 20px;
+  }
+
+  .dataTables_wrapper .dataTables_filter,
+  .dataTables_wrapper .dataTables_length {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .dataTables_wrapper .dataTables_filter input {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .dataTables_wrapper .dataTables_paginate {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+}
+
+table.dataTable {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.dataTables_wrapper .row {
+  align-items: center;
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+  margin-bottom: 20px;
+}
+
+.dataTables_wrapper .pagination {
+  gap: 6px;
+}
+
+.dataTables_wrapper .page-item .page-link {
+  border: none !important;
+  border-radius: 10px !important;
+  color: #374151 !important;
+  padding: 8px 14px;
+  transition: all 0.2s ease;
+}
+
+.dataTables_wrapper .page-item.active .page-link {
+  background: #2563eb !important;
+  color: white !important;
+}
+
+.dataTables_wrapper .page-item .page-link:hover {
+  background: #eff6ff !important;
+  color: #2563eb !important;
+}
+
+.dataTables_wrapper .page-item.disabled .page-link {
+  opacity: 0.5;
+}
+
+.dataTables_wrapper .row {
+  margin: 0;
+}
+
+.dataTables_wrapper .col-sm-12 {
+  padding: 0;
+}
+
+.dataTables_wrapper .pagination {
+  margin: 0;
+}
+
+.dataTables_wrapper .page-link {
+  min-width: 40px;
+  text-align: center;
+}
+
+.dataTables_filter input {
+  min-width: 220px;
+}
+
+.user-table thead th {
+  white-space: nowrap;
+}
+
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn {
+  border: none;
+  background: #2563eb;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 8px;
+}
+
+.delete-btn {
+  border: none;
+  background: #dc2626;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 8px;
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.edit-modal {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+}
+
+.edit-modal h2 {
+  margin-bottom: 20px;
+}
+
+.edit-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit-modal input {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.save-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+.cancel-btn {
+  background: #e5e7eb;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+.compare-modal {
+  width: 95%;
+  max-width: 1200px;
+
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 30px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+}
+
+.compare-header {
+  margin-bottom: 20px;
+}
+
+.compare-table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.compare-table th,
+.compare-table td {
+  border: 1px solid #e5e7eb;
+
+  padding: 14px;
+
+  text-align: left;
+
+  vertical-align: top;
+}
+
+.compare-table th {
+  background: #f9fafb;
+
+  font-weight: 700;
+}
+
+.field-name {
+  font-weight: 700;
+
+  background: #f3f4f6;
+
+  min-width: 180px;
+}
+
+.compare-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-top: 20px;
+}
+
+.merge-btn {
+  border: none;
+
+  background: #16a34a;
+
+  color: white;
+
+  padding: 10px 18px;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+}
+
+.compare-table-wrapper {
+  overflow-x: auto;
+}
+
+.modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 9999;
+}
+
+.compare-modal {
+  position: relative;
+
+  z-index: 10000;
+
+  pointer-events: auto;
+}
+
+.compare-actions {
+  position: relative;
+
+  z-index: 10001;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  margin-top: 24px;
+}
+
+.compare-actions button {
+  pointer-events: auto;
+
+  cursor: pointer;
+}
+
+.merge-btn {
+  border: none;
+
+  background: #16a34a;
+
+  color: white;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
