@@ -1,4 +1,3 @@
-//customer-details\src\App.jsx
 import UserTable from "./components/UserTable.jsx";
 
 function App() {

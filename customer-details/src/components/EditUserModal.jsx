@@ -1,4 +1,3 @@
-//customer-details\src\components\EditUserModal.jsx
 import { useEffect, useState } from "react";
 
 function EditUserModal({ user, isOpen, onClose, onSave }) {

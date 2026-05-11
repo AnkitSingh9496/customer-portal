@@ -2,7 +2,6 @@ const BASE_URL = "/randomuser/api/";
 export async function fetchAllUsers(totalUsers = 500) {
   const pageSize = 100;
   const pages = Math.ceil(totalUsers / pageSize);
-  // const seed = 'cdp2024stable';
   const seed = "59902bdd2bae280e";
 
   const requests = Array.from({ length: pages }, (_, i) =>

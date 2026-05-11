@@ -1,4 +1,3 @@
-//customer-details\src\utils\helper.jsx
 export const formatDate = (date) => {
   return new Date(date).toLocaleDateString("en-US", {
     month: "short",

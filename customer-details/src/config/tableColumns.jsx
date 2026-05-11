@@ -1,4 +1,3 @@
-//customer-details\src\config\tableColumns.jsx
 export const userColumns = [
   {
     key: "checkbox",

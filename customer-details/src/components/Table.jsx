@@ -1,4 +1,3 @@
-//customer-details\src\components\Table.jsx
 import { useEffect, useRef } from "react";
 import $ from "jquery";
 import "datatables.net-bs5";
